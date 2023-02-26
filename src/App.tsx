@@ -1,15 +1,17 @@
 import React from 'react';
-import { ExpensesList } from './components/ExpensesList';
-import { Form } from './components/Form';
+import { AddExpenses } from './components/AddExpenses/AddExpenses';
+import { BagetApp } from './components/BagetApp/BagetApp';
+import { Expenses } from './components/Expenses/Expenses';
+import { ExpensesList } from './components/ExpensesList/ExpensesList';
+import { Form } from './components/Form/Form';
+import { StyledApp } from './ui/styles';
 
 export const App = () => {
   return (
-    <div>
-      <ExpensesList />
-      <Form />
-      {/* <BagetApp />
+    <StyledApp>
+      <BagetApp />
       <Expenses />
-      <AddExpenses /> */}
-    </div>
+      <AddExpenses />
+    </StyledApp>
   );
 };

@@ -1,12 +1,15 @@
-import { useExpensesContext } from '../context/ExpensesContext/ExpensesContext';
+import { useExpensesContext } from '../../context/ExpensesContext/ExpensesContext';
+import { ExpensesItem } from '../ExpensesItem/ExpensesItem';
+import { StyledExpensesList } from './styles';
 
 export const ExpensesList = () => {
   const { expenses, deleteExpense } = useExpensesContext();
 
   return (
-    <ul>
+    <StyledExpensesList>
       {expenses.map(({ id, name, cost }) => {
         return (
+          // <ExpensesItem id={id} name={name} cost={cost} />
           <li>
             <span>{name}------</span>
             <span>${cost}</span>
@@ -14,6 +17,6 @@ export const ExpensesList = () => {
           </li>
         );
       })}
-    </ul>
+    </StyledExpensesList>
   );
 };
