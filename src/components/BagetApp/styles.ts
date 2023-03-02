@@ -8,3 +8,10 @@ export const StyledBagetApp = styled.div`
   max-width: 500px;
   padding: 20px;
 `;
+
+export const StyledHandlerBagetApp = styled.div`
+  display: grid;
+  grid-template-columns: 80% 20%;
+  width: 100%;
+  padding-left: 20px;
+`;
