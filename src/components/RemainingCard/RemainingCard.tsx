@@ -1,10 +1,12 @@
 import React from 'react';
 import { useBadgetContext } from '../../context/BudgetContext/BudgetContext';
+import { useCurrencyContext } from '../../context/CurrencyContext/CurrencyContext';
 import { useExpensesContext } from '../../context/ExpensesContext/ExpensesContext';
 import { StyledRemainingCard } from './styled';
 
 export const RemainingCard = () => {
   const { budget } = useBadgetContext();
+  const { currency } = useCurrencyContext();
 
   const { expenses } = useExpensesContext();
 
@@ -16,8 +18,8 @@ export const RemainingCard = () => {
   return (
     <StyledRemainingCard $isOverspanding={isOverspending}>
       {isOverspending
-        ? `Overspending by ${remaining}`
-        : `Remaining: ${remaining}`}
+        ? `Overspending by ${currency.value} ${remaining}`
+        : `Remaining: ${currency.value}${remaining}`}
     </StyledRemainingCard>
   );
 };
