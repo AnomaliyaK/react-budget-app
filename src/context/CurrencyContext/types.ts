@@ -1,10 +1,12 @@
 import { ReactNode } from 'react';
-import { Currency } from '../../types/types';
+import { CurrencyValue } from '../../types/types';
 
 export interface CurrencyContextProviderProps {
   children: ReactNode;
 }
 
 export interface CurrencyContextValue {
-  currency: Currency;
+  currentCurrency: CurrencyValue;
+  currencies: CurrencyValue[];
+  changeCurrency: (option: CurrencyValue) => void;
 }

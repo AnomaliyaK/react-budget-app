@@ -1,16 +1,19 @@
 import { useBadgetContext } from '../../context/BudgetContext/BudgetContext';
 import { useCurrencyContext } from '../../context/CurrencyContext/CurrencyContext';
-
 import { useInput } from '../../hooks/useInput';
 import { useToggle } from '../../hooks/useToggle';
-import { StyledBagetCard } from './styles';
+
+import {
+  StyledBagetCard,
+  StyledButtonBaget,
+  StyledInputBudge,
+  StyledTitleBudget,
+} from './styles';
 
 export const BagetCard = () => {
-  // 5-хук вызова контекста BudgetContext из BudgetContext.tsx
-  //   7-устанавливаем новое значение бюджета
   const { budget, setNewBudget } = useBadgetContext();
 
-  const { currency } = useCurrencyContext();
+  const { currentCurrency } = useCurrencyContext();
 
   const [isEditMode, toggleEditMode] = useToggle();
 
@@ -29,20 +32,20 @@ export const BagetCard = () => {
     <StyledBagetCard>
       {isEditMode ? (
         <>
-          <input
+          <StyledInputBudge
             type="number"
             placeholder="Enter  budget ..."
             {...inputBudget}
           />
-          <button onClick={handleSave}>Save</button>
+          <StyledButtonBaget onClick={handleSave}>Save</StyledButtonBaget>
         </>
       ) : (
         <>
-          <p>
-            Baget: {currency.value}
+          <StyledTitleBudget>
+            Baget: {currentCurrency.value}
             {budget}
-          </p>
-          <button onClick={handleEdit}>Edit</button>
+          </StyledTitleBudget>
+          <StyledButtonBaget onClick={handleEdit}>Edit</StyledButtonBaget>
         </>
       )}
     </StyledBagetCard>

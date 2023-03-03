@@ -1,28 +1,20 @@
 import React from 'react';
 import Select, { SingleValue } from 'react-select';
-import { Currency } from '../../types/types';
+import { useCurrencyContext } from '../../context/CurrencyContext/CurrencyContext';
+import { CurrencyValue } from '../../types/types';
 import { selectStyles } from './styles';
 
-interface CurrencySelectProps {
-  options: Currency[];
-  value: Currency;
-  onChange: (option: Currency) => void;
-}
-
-export const CurrencySelect = ({
-  options,
-  value,
-  onChange,
-}: CurrencySelectProps) => {
-  const handleCurrency = (option: SingleValue<Currency>): void => {
-    if (option) onChange(option);
+export const CurrencySelect = () => {
+  const { currentCurrency, currencies, changeCurrency } = useCurrencyContext();
+  const handleCurrency = (option: SingleValue<CurrencyValue>): void => {
+    if (option) changeCurrency(option);
   };
   return (
     <Select
-      options={options}
+      options={currencies}
       styles={selectStyles}
       onChange={handleCurrency}
-      value={value}
+      value={currentCurrency}
       isMulti={false}
     />
   );

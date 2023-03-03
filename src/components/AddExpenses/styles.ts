@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 export const StyledAddExpenses = styled.div`
   display: grid;
-  place-items: center;
+  grid-gap: 20px;
   width: 100%;
+  max-width: 768px;
+  padding: 20px;
 `;

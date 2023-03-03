@@ -1,7 +1,7 @@
 import { StylesConfig } from 'react-select';
-import { Currency } from '../../types/types';
+import { CurrencyValue } from '../../types/types';
 
-export const selectStyles: StylesConfig<Currency> = {
+export const selectStyles: StylesConfig<CurrencyValue> = {
   control: (baseStyles) => ({
     ...baseStyles,
     height: '30px',

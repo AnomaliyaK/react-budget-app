@@ -2,16 +2,14 @@ import styled from 'styled-components';
 
 export const StyledBagetApp = styled.div`
   display: grid;
-  grid-gap: 30px;
-  place-items: center;
+  grid-gap: 20px;
   width: 100%;
-  max-width: 500px;
+  max-width: 768px;
   padding: 20px;
 `;
 
 export const StyledHandlerBagetApp = styled.div`
   display: grid;
-  grid-template-columns: 80% 20%;
+  grid-template-columns: 75% 25%;
   width: 100%;
-  padding-left: 20px;
 `;

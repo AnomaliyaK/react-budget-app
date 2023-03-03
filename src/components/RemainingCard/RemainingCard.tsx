@@ -6,20 +6,20 @@ import { StyledRemainingCard } from './styled';
 
 export const RemainingCard = () => {
   const { budget } = useBadgetContext();
-  const { currency } = useCurrencyContext();
+  const { currentCurrency } = useCurrencyContext();
 
   const { expenses } = useExpensesContext();
 
   const remaining =
-    budget - expenses.reduce((total, { cost }) => total + cost, 0);
+    budget - expenses.reduce((total, { cost }) => total + Number(cost), 0);
 
   const isOverspending = remaining < 0;
 
   return (
     <StyledRemainingCard $isOverspanding={isOverspending}>
       {isOverspending
-        ? `Overspending by ${currency.value} ${remaining}`
-        : `Remaining: ${currency.value}${remaining}`}
+        ? `Overspending by  ${currentCurrency.value}${remaining}`
+        : `Remaining: ${currentCurrency.value}${remaining}`}
     </StyledRemainingCard>
   );
 };

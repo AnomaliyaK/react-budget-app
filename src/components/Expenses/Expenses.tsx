@@ -7,11 +7,11 @@ import { Input } from '../Input/Input';
 import { StyledExpenses } from './styles';
 
 export const Expenses = () => {
-  // const { searchValue } = useInput();
+  const { value } = useInput();
 
-  // const { expenses } = useExpensesContext();
+  const { expenses } = useExpensesContext();
   // стейт нужен для отрисовки списка пользователю
-  // const [filteredExpenses, setFilteredExpenses] = useState(expenses);
+  const [filteredExpenses, setFilteredExpenses] = useState(expenses);
 
   // useEffect(() => {
   //   setFilteredExpenses((prevData) => filter(123));
@@ -19,10 +19,10 @@ export const Expenses = () => {
 
   return (
     <StyledExpenses>
-      <Title>Expense</Title>
-      {/* <input type="text" {...searchValue} /> */}
-      <Input placeholder="search..." type="text" />
-      {/* <ExpensesList expenses={filteredExpenses} /> */}
+      <Title>Expenses</Title>
+      <input type="text" placeholder="search..." />
+      {/* <InputSearch placeholder="search..." type="text" name="name"
+          /> */}
       <ExpensesList />
     </StyledExpenses>
   );

@@ -13,11 +13,11 @@ const useExpensesContextValue = () => {
       return {
         expenses: [
           {
-            id: 1,
+            id: '1',
             name: 'ps5',
             cost: 1000,
           },
-          { id: 2, name: 'ps6', cost: 2000 },
+          { id: '2', name: 'ps6', cost: 2000 },
         ],
 
         addNewExpenses: (expense) => {

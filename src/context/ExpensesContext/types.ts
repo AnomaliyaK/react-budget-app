@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 export interface ExpensesContextValue {
   expenses: Expense[];
   addNewExpenses: (value: Expense) => void;
-  deleteExpense: (id: number) => void;
+  deleteExpense: (id: string) => void;
 }
 
 export interface ExpensesContextProviderProps {
@@ -11,7 +11,7 @@ export interface ExpensesContextProviderProps {
 }
 
 interface Expense {
-  id: number;
+  id: string;
   name: string;
   cost: number;
 }

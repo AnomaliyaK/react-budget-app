@@ -5,15 +5,13 @@ import { useExpensesContext } from '../../context/ExpensesContext/ExpensesContex
 import { StyledSpentCard } from './styles';
 
 export const SpentCard = () => {
-  const { currency } = useCurrencyContext();
+  const { currentCurrency } = useCurrencyContext();
   const { expenses } = useExpensesContext();
-  const spant = expenses.reduce((total, { cost }) => total + cost, 0);
+  const spant = expenses.reduce((total, { cost }) => total + Number(cost), 0);
   return (
     <StyledSpentCard>
-      <span>
-        Spent so far:{currency.value}
-        {spant}
-      </span>
+      Spent so far: {currentCurrency.value}
+      {spant}
     </StyledSpentCard>
   );
 };

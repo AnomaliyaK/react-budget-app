@@ -6,7 +6,7 @@ export const StyledApp = styled.div`
   min-height: 100vh;
   background-color: #ffffff;
 `;
-
+// подкорруктировать этот тайтл или удвлить
 export const Title = styled.h2`
   margin-bottom: 30px;
   font-size: 24px;

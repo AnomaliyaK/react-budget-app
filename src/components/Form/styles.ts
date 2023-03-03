@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 const StyledForm = styled.form`
   display: grid;
-  grid-gap: 30px;
+  grid-gap: 20px;
   width: 100%;
-  max-width: 500px;
-  padding: 20px;
+  max-width: 768px;
+  /* padding: 20px; */
 `;
 
 const InputGroup = styled.div`
