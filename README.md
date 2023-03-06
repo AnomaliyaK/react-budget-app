@@ -2,11 +2,10 @@
 <br />
 <div align="center">
    <h3 align="center">Budget App</h3>
-
   <p align="center">
     A complete picture of your finances
     <br />
-    <a href=" https://anomaliyak.github.io/react-budget-app/"><strong>Explore the App »</strong></a>
+    <a href="https://anomaliyak.github.io/react-budget-app/"><strong>Explore the App</strong></a>
     <br />
     </p>
 </div>
