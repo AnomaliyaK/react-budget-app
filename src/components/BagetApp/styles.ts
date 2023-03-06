@@ -5,7 +5,7 @@ export const StyledBagetApp = styled.div`
   grid-gap: 20px;
   width: 100%;
   max-width: 768px;
-  padding: 20px;
+  padding: 30px 20px;
 `;
 
 export const StyledHandlerBagetApp = styled.div`

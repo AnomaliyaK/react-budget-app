@@ -1,29 +1,36 @@
 import React, { useEffect, useState } from 'react';
 import { useExpensesContext } from '../../context/ExpensesContext/ExpensesContext';
+import { useDebounce } from '../../hooks/useDebounce';
 import { useInput } from '../../hooks/useInput';
-import { Title } from '../../ui/styles';
+import { InputSearch } from '../InputSearch/InputSearch';
 import { ExpensesList } from '../ExpensesList/ExpensesList';
-import { Input } from '../Input/Input';
-import { StyledExpenses } from './styles';
+import { Title } from '../Title/Title';
+import { StyledExpenses, StyledText } from './styles';
+import { Expense } from '../../context/ExpensesContext/types';
 
 export const Expenses = () => {
-  const { value } = useInput();
-
   const { expenses } = useExpensesContext();
-  // стейт нужен для отрисовки списка пользователю
-  const [filteredExpenses, setFilteredExpenses] = useState(expenses);
+  const searchValue = useInput();
+  const debouncedValue = useDebounce(searchValue.value);
+  const [filteredExpenses, setFilteredExpenses] = useState<Expense[]>(expenses);
 
-  // useEffect(() => {
-  //   setFilteredExpenses((prevData) => filter(123));
-  // }, [searchValue]);
+  useEffect(() => {
+    setFilteredExpenses(
+      expenses.filter((expense) =>
+        expense.name.toLowerCase().includes(searchValue.value.toLowerCase())
+      )
+    );
+  }, [debouncedValue, expenses]);
 
   return (
     <StyledExpenses>
-      <Title>Expenses</Title>
-      <input type="text" placeholder="search..." />
-      {/* <InputSearch placeholder="search..." type="text" name="name"
-          /> */}
-      <ExpensesList />
+      <Title title="Expenses" />
+      <InputSearch placeholder="search..." {...searchValue} />
+      {filteredExpenses.length ? (
+        <ExpensesList expenses={filteredExpenses} />
+      ) : (
+        <StyledText>Oooops 🙈</StyledText>
+      )}
     </StyledExpenses>
   );
 };

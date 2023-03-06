@@ -5,7 +5,7 @@ import { Input } from '../Input/Input';
 import { InputGroup, StyledForm } from './styles';
 import { v4 as uuidv4, v4 } from 'uuid';
 
-type InputTypes = {
+export type InputTypes = {
   name: string;
   cost: number;
   search: string;

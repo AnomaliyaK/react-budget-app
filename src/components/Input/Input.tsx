@@ -1,12 +1,8 @@
 import React, { HTMLInputTypeAttribute } from 'react';
 import { UseFormRegister } from 'react-hook-form';
+import { InputTypes } from '../Form/Form';
 import { StyledInput } from './styles';
 
-type InputTypes = {
-  name: string;
-  cost: number;
-  search: string;
-};
 interface InputProps {
   placeholder: string;
   type: HTMLInputTypeAttribute;

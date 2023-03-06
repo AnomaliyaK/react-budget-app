@@ -10,7 +10,7 @@ export interface ExpensesContextProviderProps {
   children: ReactNode;
 }
 
-interface Expense {
+export interface Expense {
   id: string;
   name: string;
   cost: number;
