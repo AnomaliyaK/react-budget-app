@@ -22,10 +22,12 @@ This application will help you plan your budget. By entering daily expenses, you
 ### Built With
 
 - [![React][react.js]][react-url]
-- [![Typescript][typescriptlang.org]][typescriptlang-url]
-- [![React-hook-form][react-hook-form.com]][react-hook-form-url]
-- [![React-select][react-select.com]][react-select-url]
-- [![Styled-components][styled-components.com/][styled-components-url]
+
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+
+![React Hook Form](https://img.shields.io/badge/React%20Hook%20Form-%23EC5990.svg?style=for-the-badge&logo=reacthookform&logoColor=white)
+
+![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
 
 <!-- CONTACT -->
 
