@@ -21,7 +21,7 @@ This application will help you plan your budget. By entering daily expenses, you
 
 ### Built With
 
-- [![React][react.js]][react-url]
+![React][react.js][react-url]
 
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 

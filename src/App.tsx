@@ -1,7 +1,4 @@
-import React from 'react';
-import { AddExpenses } from './components/AddExpenses/AddExpenses';
-import { BagetApp } from './components/BagetApp/BagetApp';
-import { Expenses } from './components/Expenses/Expenses';
+import { AddExpenses, BagetApp, Expenses } from 'components';
 import { StyledApp } from './ui/styles';
 
 export const App = () => {
