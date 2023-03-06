@@ -1,8 +1,5 @@
-import { useBadgetContext } from '../../context/BudgetContext/BudgetContext';
-import { useCurrencyContext } from '../../context/CurrencyContext/CurrencyContext';
-import { useInput } from '../../hooks/useInput';
-import { useToggle } from '../../hooks/useToggle';
-
+import { useBadgetContext, useCurrencyContext } from 'context';
+import { useInput, useToggle } from 'hooks';
 import {
   StyledBagetCard,
   StyledButtonBaget,

@@ -1,9 +1,8 @@
 import { SubmitHandler, useForm } from 'react-hook-form';
-import { useExpensesContext } from '../../context/ExpensesContext/ExpensesContext';
-import { Button } from '../Button/Button';
-import { Input } from '../Input/Input';
 import { InputGroup, StyledForm } from './styles';
 import { v4 as uuidv4, v4 } from 'uuid';
+import { useExpensesContext } from 'context';
+import { Button, Input } from 'components';
 
 export type InputTypes = {
   name: string;

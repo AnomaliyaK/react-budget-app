@@ -1,12 +1,9 @@
+import { useExpensesContext } from 'context';
+import { useDebounce, useInput } from 'hooks';
 import React, { useEffect, useState } from 'react';
-import { useExpensesContext } from '../../context/ExpensesContext/ExpensesContext';
-import { useDebounce } from '../../hooks/useDebounce';
-import { useInput } from '../../hooks/useInput';
-import { InputSearch } from '../InputSearch/InputSearch';
-import { ExpensesList } from '../ExpensesList/ExpensesList';
-import { Title } from '../Title/Title';
 import { StyledExpenses, StyledText } from './styles';
 import { Expense } from '../../context/ExpensesContext/types';
+import { ExpensesList, InputSearch, Title } from 'components';
 
 export const Expenses = () => {
   const { expenses } = useExpensesContext();

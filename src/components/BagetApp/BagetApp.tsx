@@ -1,8 +1,10 @@
-import { BagetCard } from '../BagetCard/BagetCard';
-import { CurrencySelect } from '../CurrencySelect/CurrencySelect';
-import { RemainingCard } from '../RemainingCard/RemainingCard';
-import { SpentCard } from '../SpentCard/SpentCard';
-import { Title } from '../Title/Title';
+import {
+  BagetCard,
+  CurrencySelect,
+  RemainingCard,
+  SpentCard,
+  Title,
+} from 'components';
 import { StyledBagetApp, StyledHandlerBagetApp } from './styles';
 
 export const BagetApp = () => {

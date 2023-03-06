@@ -1,7 +1,8 @@
-import React from 'react';
-import { useBadgetContext } from '../../context/BudgetContext/BudgetContext';
-import { useCurrencyContext } from '../../context/CurrencyContext/CurrencyContext';
-import { useExpensesContext } from '../../context/ExpensesContext/ExpensesContext';
+import {
+  useBadgetContext,
+  useCurrencyContext,
+  useExpensesContext,
+} from 'context';
 import { StyledRemainingCard } from './styled';
 
 export const RemainingCard = () => {

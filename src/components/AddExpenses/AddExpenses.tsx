@@ -1,7 +1,5 @@
 import React from 'react';
-
-import { Form } from '../Form/Form';
-import { Title } from '../Title/Title';
+import { Form, Title } from 'components';
 import { StyledAddExpenses } from './styles';
 
 export const AddExpenses = () => {

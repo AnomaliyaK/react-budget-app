@@ -1,5 +1,5 @@
 import React from 'react';
-import { CurrencyValue } from '../../types/types';
+import { CurrencyValue } from 'types/types';
 import { StyledBudge } from './styled';
 
 interface BadgeProps {

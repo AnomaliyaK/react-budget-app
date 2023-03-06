@@ -1,13 +1,13 @@
+import { Badge } from 'components';
+import { useCurrencyContext, useExpensesContext } from 'context';
 import React from 'react';
 import { Expense } from '../../context/ExpensesContext/types';
-import { Badge } from '../Badge/Badge';
 import {
   StyledExpensesButton,
   StyledExpensesItem,
   StyledExpensesName,
 } from './styled';
-import { useCurrencyContext } from '../../context/CurrencyContext/CurrencyContext';
-import { useExpensesContext } from '../../context/ExpensesContext/ExpensesContext';
+
 interface ExpensesItemProps {
   expense: Expense;
 }
