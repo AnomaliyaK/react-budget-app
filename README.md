@@ -6,7 +6,7 @@
   <p align="center">
     A complete picture of your finances
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the App »</strong></a>
+    <a href=" https://anomaliyak.github.io/react-budget-app/"><strong>Explore the App »</strong></a>
     <br />
     </p>
 </div>
