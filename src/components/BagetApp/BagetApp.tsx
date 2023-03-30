@@ -11,7 +11,7 @@ export const BagetApp = () => {
   return (
     <StyledBagetApp>
       <StyledHandlerBagetApp>
-        <Title title="Baget App" />
+        <Title title="Buget App" />
         <CurrencySelect />
       </StyledHandlerBagetApp>
       <BagetCard />

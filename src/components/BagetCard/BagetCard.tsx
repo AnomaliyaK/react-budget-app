@@ -39,7 +39,7 @@ export const BagetCard = () => {
       ) : (
         <>
           <StyledTitleBudget>
-            Baget: {currentCurrency.value}
+            Buget: {currentCurrency.value}
             {budget}
           </StyledTitleBudget>
           <StyledButtonBaget onClick={handleEdit}>Edit</StyledButtonBaget>
